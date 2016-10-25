@@ -24,7 +24,7 @@ Args:
 Example usage:
 
 ```shell
-NautilusFilterEvaluator.exe "Data Source=nautilus;User Id=lims_sys;Password=lims_sys1;" 1 "comment for this run"
+NautilusFilterEvaluator.exe "Data Source=nautilus;User Id=lims_sys;Password=*;" 1 "comment for this run"
 ```
 
 Example SQL for comparing two evaluations' broken filters:
