@@ -17,6 +17,7 @@ create table filter_evaluation (
 ```
 
 Args:
+
 1. Connection string
 2. Starting filter ID (usually 1)
 3. Comments to include with each evaluation record
@@ -25,6 +26,14 @@ Example usage:
 
 ```shell
 NautilusFilterEvaluator.exe "Data Source=nautilus;User Id=lims_sys;Password=*;" 1 "comment for this run"
+```
+
+Multiple runs queued up in a bat file:
+
+```shell
+NautilusFilterEvaluator.exe "Data Source=nautilus;User Id=lims_sys;Password=*;" 1 "run1"
+NautilusFilterEvaluator.exe "Data Source=nautilus;User Id=lims_sys;Password=*;" 1 "run2"
+NautilusFilterEvaluator.exe "Data Source=nautilus;User Id=lims_sys;Password=*;" 1 "run3"
 ```
 
 Example SQL for comparing two evaluations' broken filters:
