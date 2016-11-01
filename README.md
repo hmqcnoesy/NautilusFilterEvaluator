@@ -89,13 +89,13 @@ select ds1.filter_id ds1_id, ds2.filter_id ds2_id,
   from 
     (select data_source, filter_id, name, status, max(time) max_time, min(time) min_time, avg(time) avg_time, count(time) ct
     from  filter_evaluation 
-    where data_source = :data_source2
-    group by data_source, filter_id, name, status) ds2
+    where data_source = :data_source1
+    group by data_source, filter_id, name, status) ds1
   join
     (select data_source, filter_id, name, status, max(time) max_time, min(time) min_time, avg(time) avg_time, count(time) ct
     from  filter_evaluation 
-    where data_source = :data_source1
-    group by data_source, filter_id, name, status) ds1
+    where data_source = :data_source2
+    group by data_source, filter_id, name, status) ds2
   on ds1.name = ds2.name
   where nvl(ds1.status, 'ok') = 'ok' and nvl(ds2.status, 'ok') = 'ok'
 order by 1;
