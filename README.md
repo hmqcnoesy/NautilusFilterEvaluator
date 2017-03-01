@@ -1,7 +1,7 @@
 # NautilusFilterEvaluator
 Evaluates filter speed for Nautilus environment
 
-Requires `filter_evaulation` table in schema specified in connection string:
+Requires `filter_evaulation` table and `sq_filter_evaluation` sequence in schema specified in connection string:
 
 ```sql
 create table filter_evaluation (
