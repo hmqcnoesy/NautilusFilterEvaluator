@@ -14,6 +14,8 @@ create table filter_evaluation (
   sql_text varchar2(4000),
   timestamp date,
   comments varchar2(2000));
+  
+create sequence sq_filter_evaluation;
 ```
 
 Args:
